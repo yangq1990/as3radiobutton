@@ -1,0 +1,29 @@
+You can use the custom radiobutton like this
+
+_group = new RadioButtonGroup();
+_group.addEventListener(Event.CHANGE, changeHandler);
+			
+var rb:RadioButton = new RadioButton("Î¢ÈíÑÅºÚ", 0xff0000, 16);
+rb.label = "MacGrady";
+rb.value = "m";
+rb.group = _group;
+addChild(rb);
+			
+var rb2:RadioButton = new RadioButton("Î¢ÈíÑÅºÚ", 0xff0000, 16);
+rb2.label = "Duncan";
+rb2.value = "d";
+rb2.group = _group;
+rb2.y = rb.height + 5;
+addChild(rb2);
+			
+var rb3:RadioButton = new RadioButton("Î¢ÈíÑÅºÚ", 0xff0000, 16);
+rb3.label = "Bryant";
+rb3.value = "b";
+rb3.group = _group;
+rb3.y = rb2.y + rb2.height + 5;
+addChild(rb3);
+
+function changeHandler(evt:Event):void
+{
+	trace("selectedData-->", _group.selectedData);
+}
